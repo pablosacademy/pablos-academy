@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Pablos Academy</title>
-    <link rel="stylesheet" href="./css/styles.css?v=2">
+    <link rel="stylesheet" href="./css/styles.css?v=3">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,43 +54,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <header class="header">
-        <div class="header__top container">
-            <div class="header__logo">
-                <img src="./img/logo.webp" alt="logo" width="145" height="55" class="header__logo-img">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__logo">
+                    <img src="./img/logo.webp" alt="logo" width="145" height="55" class="header__logo-img">
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#target-audience" class="header__nav-link">Для кого</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#advantages" class="header__nav-link">Переваги</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#about-us" class="header__nav-link">Про нас</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#program" class="header__nav-link">Програма</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#faq" class="header__nav-link">Питання</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#reviews" class="header__nav-link">Відгуки</a>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="header__cta">
+                        <span class="header__cta-text">Приєднатись</span>
+                        <svg class="header__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M18.5 5.5v13h-3v-7.883l-9.09 9.09-2.117-2.117 9.09-9.09H5.5v-3z" fill="#101010" stroke="#101010"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                    </a>
+                </nav>
+
+                <button class="header__burger" type="button" aria-label="Открыть меню">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
             </div>
-
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item">
-                        <a href="#target-audience" class="header__nav-link">Для кого</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#advantages" class="header__nav-link">Переваги</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#about-us" class="header__nav-link">Про нас</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#program" class="header__nav-link">Програма</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#faq" class="header__nav-link">Питання</a>
-                    </li>
-                    <li class="header__nav-item">
-                        <a href="#reviews" class="header__nav-link">Відгуки</a>
-                    </li>
-                </ul>
-
-                <a href="#contact" class="header__cta">
-                    <span class="header__cta-text">Приєднатись</span>
-                    <svg class="header__cta-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M18.5 5.5v13h-3v-7.883l-9.09 9.09-2.117-2.117 9.09-9.09H5.5v-3z" fill="#101010" stroke="#101010"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
-                </a>
-            </nav>
-
-            <button class="header__burger" type="button" aria-label="Открыть меню">
-                <span class="header__burger-line"></span>
-                <span class="header__burger-line"></span>
-            </button>
+           
         </div>
 
         <div class="header__bottom container">
@@ -1792,7 +1795,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     
                     <label class="contact__checkbox-label">
-                        <input type="checkbox" class="contact__checkbox" name="agreement" required>
+                        <input type="checkbox" class="contact__checkbox" name="agreement" >
                         <div class="contact__checkbox-custom"></div>
                         <span class="contact__checkbox-text">Я свідомо заповнюю форму для отримання більш детальної інформації та розумію, що зі мною звʼязується менеджер</span>
                     </label>
