@@ -1,68 +1,133 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('.contact__form');
-    const checkbox = document.querySelector('.contact__checkbox');
-    const submitBtn = document.querySelector('.contact__form-btn');
-    
-    if (form && checkbox && submitBtn) {
-        form.addEventListener('submit', function(e) {
-            // Проверяем, отмечен ли чекбокс согласия
-            if (!checkbox.checked) {
-                e.preventDefault(); // Предотвращаем отправку формы
-                
-                // Добавляем визуальную индикацию ошибки
-                checkbox.parentElement.classList.add('error');
-                
-                // Показываем сообщение об ошибке
-                showErrorMessage('Будь ласка, підтвердіть згоду на обробку даних');
-                
-                return false;
+$(document).ready(function() {
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6abWXQ1xXL16C5Jd8QeC41wXEi1rvpHsELzMR8HnG-MbG1Wpj9sW3BngyL_nQ1G-B/exec';
+    const form = $('.contact__form');
+    const checkbox = $('.contact__checkbox');
+    const submitBtn = $('.contact__form-btn');
+
+    // --- UTM Метки ---
+    function getUrlParams() {
+        const params = {};
+        const query = window.location.search.substring(1);
+        const pairs = query.split("&");
+
+        for (let i = 0; i < pairs.length; i++) {
+            const pair = pairs[i].split("=");
+            const key = decodeURIComponent(pair[0]);
+            const value = decodeURIComponent(pair[1] || "");
+            if (key) {
+                params[key] = value;
             }
+        }
+
+        return params;
+    }
+
+    const utmParams = getUrlParams();
+
+    // Записываем значения в скрытые поля, если они есть
+    if (utmParams.utm_source)    $('#utm_source').val(utmParams.utm_source);
+    if (utmParams.utm_medium)    $('#utm_medium').val(utmParams.utm_medium);
+    if (utmParams.utm_campaign)  $('#utm_campaign').val(utmParams.utm_campaign);
+    if (utmParams.utm_content)   $('#utm_content').val(utmParams.utm_content);
+
+
+    // --- Отправка формы ---
+    if (form.length && checkbox.length && submitBtn.length) {
+        form.on('submit', function(e) {
+            e.preventDefault(); // Останавливаем отправку, пока не проверим чекбокс
+
+            if (!checkbox.prop('checked')) {
+                checkbox.parent().addClass('error');
+                showErrorMessage('Будь ласка, підтвердіть згоду на обробку даних');
+                return;
+            }
+
+            // Убираем ошибку, если чекбокс отмечен
+            checkbox.parent().removeClass('error');
+            hideErrorMessage();
+
+            // Отправка данных в Google Sheets
+            const formData = new FormData(this);
+
+            $('#thankYouPopup').fadeIn();
             
-            // Если чекбокс отмечен, убираем класс ошибки
-            checkbox.parentElement.classList.remove('error');
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    form[0].reset(); // очищаем форму после отправки
+                    fbq('track', 'CompleteRegistration')
+                    
+                })
+                .catch(error => {
+                    alert('Помилка при відправці. Спробуйте ще раз.');
+                    console.error('Error!', error.message);
+                });
         });
-        
-        // Убираем класс ошибки при клике на чекбокс
-        checkbox.addEventListener('change', function() {
-            if (this.checked) {
-                this.parentElement.classList.remove('error');
+
+        // Убираем ошибку при изменении чекбокса
+        checkbox.on('change', function() {
+            if ($(this).prop('checked')) {
+                $(this).parent().removeClass('error');
                 hideErrorMessage();
             }
         });
     }
-    
+
+    // --- Показ сообщения об ошибке ---
     function showErrorMessage(message) {
-        // Удаляем предыдущее сообщение об ошибке, если оно есть
-        hideErrorMessage();
-        
-        // Создаем элемент для сообщения об ошибке
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'contact__form-error';
-        errorDiv.textContent = message;
-        errorDiv.style.cssText = `
-            color: #ff4444;
-            font-size: 14px;
-            text-align: center;
-            font-family: var(--font-space-grotesk);
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            right: 0;
-            z-index: 10;
-        `;
-        
-        // Вставляем сообщение в контейнер чекбокса
-        const checkboxLabel = document.querySelector('.contact__checkbox-label');
-        if (checkboxLabel) {
-            checkboxLabel.style.position = 'relative';
-            checkboxLabel.appendChild(errorDiv);
+        hideErrorMessage(); // Удалить старое сообщение
+
+        const errorDiv = $('<div>', {
+            class: 'contact__form-error',
+            text: message,
+            css: {
+                color: '#ff4444',
+                fontSize: '14px',
+                textAlign: 'center',
+                fontFamily: 'var(--font-space-grotesk)',
+                position: 'absolute',
+                bottom: '-25px',
+                left: 0,
+                right: 0,
+                zIndex: 10
+            }
+        });
+
+        const checkboxLabel = $('.contact__checkbox-label');
+        if (checkboxLabel.length) {
+            checkboxLabel.css('position', 'relative');
+            checkboxLabel.append(errorDiv);
         }
     }
-    
+
     function hideErrorMessage() {
-        const existingError = document.querySelector('.contact__form-error');
-        if (existingError) {
-            existingError.remove();
-        }
+        $('.contact__form-error').remove();
     }
+
+    // --- Закрытие попапа ---
+    function closePopup() {
+        $('#thankYouPopup').fadeOut();
+    }
+
+    // Закрытие по клику вне попапа
+    $(document).on('click', function(e) {
+        const popup = $('#thankYouPopup');
+        const content = $('#thankYouPopup .popup-content');
+
+        if (popup.is(':visible') && !content.is(e.target) && content.has(e.target).length === 0) {
+            closePopup();
+        }
+    });
+
+    // Кнопка закрытия попапа
+    $('#thankYouPopup .popup-close').on('click', function() {
+        closePopup();
+    });
+
+    $('.footer__social-link, .header__mobile-social-link').click(function() {
+        fbq('trackCustom', 'ClickTelegramZnaty')
+    })
+
 });
+
+

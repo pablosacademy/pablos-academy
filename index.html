@@ -20,8 +20,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '827777903248122');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=827777903248122&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-558HHK9M');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-558HHK9M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
     <header class="header">
         <div class="header__top container">
             <div class="header__logo">
@@ -294,7 +325,7 @@
         </section>
 
         <section class="advantages container section-margin" id="advantages">
-            <h2 class="advantages__title"><span class="color font-size-89 font">Чому</span> <br> обирають нас</h2>
+            <h2 class="advantages__title"><span class="color font-size-89 font">Переваги</span> <br> курсу</h2>
 
             <div class="advantages__cards-container">
                 <div class="advantages__cards">
@@ -372,13 +403,12 @@
                             <button class="about-us__card-close"></button>
                             <div class="about-us__card-back-content">
                                 <ul class="about-us__card-back-list">
-                                    <li>Team Lead у Pablos Team</li>
-                                    <li>4 роки досвіду</li>
-                                    <li>Вертикалі: фінанси, крипта, гемблінг, sweepstake</li>
-                                    <li>Працює з гео tier 1, 2</li>
-                                    <li>Cпенди від $80 000 до $150 000+</li>
-                                    <li>ROI: 300%+</li>
-                                    <li>На курсі допомагає підібрати правильний стратегічний напрям і дає індивідуальний фідбек</li>
+                                    <li>4 роки досвіду в арбітражі</li>
+                                    <li>Вертикалі: крипта, гемблінг, сьорфід</li>
+                                    <li>Трафік: Facebook, Google</li>
+                                    <li>Гео: tier 1, 2, 3</li>
+                                    <li>Cпенди: $100 000 - $150 000+</li>
+                                    <li>ROI: 60-70%</li>
                                 </ul>
                             </div>
                         </div>
@@ -450,12 +480,13 @@
                             <button class="about-us__card-close"></button>
                             <div class="about-us__card-back-content">
                                 <ul class="about-us__card-back-list">
-                                    <li>4 роки досвіду в арбітражі</li>
-                                    <li>Вертикалі: крипта, гемблінг, сьорфід</li>
-                                    <li>Трафік: Facebook, Google</li>
-                                    <li>Гео: tier 1, 2, 3</li>
-                                    <li>Cпенди: $100 000 - $150 000+</li>
-                                    <li>ROI: 60-70%</li>
+                                    <li>Team Lead у Pablos Team</li>
+                                    <li>4 роки досвіду</li>
+                                    <li>Вертикалі: фінанси, крипта, гемблінг, sweepstake</li>
+                                    <li>Працює з гео tier 1, 2</li>
+                                    <li>Cпенди від $80 000 до $150 000+</li>
+                                    <li>ROI: 300%+</li>
+                                    <li>На курсі допомагає підібрати правильний стратегічний напрям і дає індивідуальний фідбек</li>
                                 </ul>
                             </div>
                         </div>
@@ -1750,7 +1781,7 @@
                 <img src="./img/autolayout-img.webp" alt="autolayout" class="autolayout_image" width="670" height="260">
             </div>
 
-                            <form class="contact__form" action="https://formspree.io/f/mvgbbbgg" method="POST" novalidate>
+                            <form class="contact__form"  name="submit-to-google-sheet" novalidate>
                     <h3 class="contact__form-title">Залиште заявку і ми зв'яжимося з вами</h3>
                     
                     <div class="contact__form-inputs">
@@ -1772,6 +1803,13 @@
                         <path d="M15.5 0.5V13.5H12.5V5.61719L3.41016 14.707L1.29297 12.5898L10.3828 3.5H2.5V0.5H15.5Z" fill="#101010" stroke="#101010"/>
                     </svg>
                 </button>
+                
+                
+                <input type="hidden" name="utm_source" id="utm_source">
+                <input type="hidden" name="utm_medium" id="utm_medium">
+                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                <input type="hidden" name="utm_content" id="utm_content">
+
             </form>
         </section>
 
@@ -1844,6 +1882,18 @@
         </div>
     </footer>
 
+    
+<!-- Попап для благодарности -->
+<div id="thankYouPopup">
+    <div class="popup-content">
+        <div class="modal__title">Ми вже готуємося з тобою зв’язатися та розповісти все детально.</div>
+        <div class="modal__subtitle">Щоб залишатися в курсі новин і регулярно отримувати інсайти з арбітражу — заходь у наш Telegram-канал.</div>
+        <a href="https://t.me/pablos_academy" target="_blank">Перейти до каналу</a>
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1855,6 +1905,6 @@
     <script src="./js/reviews-slider.js"></script>
     <script src="./js/study-course-expand.js"></script>
     <script src="./js/faq.js"></script>
-    <script src="./js/contact-form.js"></script>
+    <script src="./js/contact-form.js?v=123"></script>
 </body>
 </html>
