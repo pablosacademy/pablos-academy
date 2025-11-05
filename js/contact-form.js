@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6abWXQ1xXL16C5Jd8QeC41wXEi1rvpHsELzMR8HnG-MbG1Wpj9sW3BngyL_nQ1G-B/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxlARe9ae40482tGjYp8j6Kv3aHHxrR3iE3Mz5DQ6PjD7ew-Raq_NfpE5isZZHmbkVC7A/exec';
     const form = $('.contact__form');
-    const checkbox = $('.contact__checkbox');
     const submitBtn = $('.contact__form-btn');
 
     // --- UTM Метки ---
@@ -33,19 +32,9 @@ $(document).ready(function() {
 
 
     // --- Отправка формы ---
-    if (form.length && checkbox.length && submitBtn.length) {
+    if (form.length && submitBtn.length) {
         form.on('submit', function(e) {
-            e.preventDefault(); // Останавливаем отправку, пока не проверим чекбокс
-
-            if (!checkbox.prop('checked')) {
-                checkbox.parent().addClass('error');
-                showErrorMessage('Будь ласка, підтвердіть згоду на обробку даних');
-                return;
-            }
-
-            // Убираем ошибку, если чекбокс отмечен
-            checkbox.parent().removeClass('error');
-            hideErrorMessage();
+            e.preventDefault();
 
             // Отправка данных в Google Sheets
             const formData = new FormData(this);
@@ -56,20 +45,11 @@ $(document).ready(function() {
                 .then(response => {
                     form[0].reset(); // очищаем форму после отправки
                     fbq('track', 'CompleteRegistration')
-                    
                 })
                 .catch(error => {
                     alert('Помилка при відправці. Спробуйте ще раз.');
                     console.error('Error!', error.message);
                 });
-        });
-
-        // Убираем ошибку при изменении чекбокса
-        checkbox.on('change', function() {
-            if ($(this).prop('checked')) {
-                $(this).parent().removeClass('error');
-                hideErrorMessage();
-            }
         });
     }
 
@@ -124,10 +104,4 @@ $(document).ready(function() {
         closePopup();
     });
 
-    $('.footer__social-link, .header__mobile-social-link').click(function() {
-        fbq('trackCustom', 'ClickTelegramZnaty')
-    })
-
 });
-
-
