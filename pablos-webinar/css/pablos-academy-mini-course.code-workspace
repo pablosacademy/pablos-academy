@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../pablos-academy"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "pablos-academy-mini-course"
+	}
+}
