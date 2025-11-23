@@ -4748,4 +4748,362 @@ body{
         font-size: 14px;
         font-weight: 700;
     }
+    
+    /* Копируем все остальные мобильные стили из @media (max-width: 768px) */
+    .header__title {
+        font-size: 32px !important;
+        margin-bottom: 24px;
+    }
+    
+    .header__description {
+        max-width: 100%;
+        text-align: center;
+        font-size: 500;
+    }
+    
+    .header__hero-right {
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .header__price-block {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .header__price-wrapper {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .header__timer {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        min-width: auto;
+    }
+    
+    .header__timer-item {
+        min-width: 50px;
+        width: 50px;
+    }
+    
+    .header__timer-value {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+    
+    .header__timer-label {
+        font-size: clamp(10px, 2vw, 12px);
+    }
+    
+    .header__bonus-block {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 16px;
+    }
+    
+    .header__registration-block {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 16px;
+        gap: 12px;
+    }
+    
+    .header__register-button {
+        padding: 14px 24px;
+        font-size: 16px;
+        background: #00EB8F;
+    }
+    
+    .header__stats {
+        gap: 8px;
+    }
+    
+    .header__stats-occupied,
+    .header__stats-remaining {
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    
+    .header__progress-bar {
+        height: 6px;
+    }
+    
+    .header__progress-filled {
+        background: #00EB8F;
+    }
+    
+    .header__bonus-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .header__bonus-text {
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    .header__bonus-block {
+        max-width: 100%;
+        margin-bottom: 0;
+        height: auto;
+    }
+    
+    .header__bottom {
+        padding-top: 0px;
+        gap: 24px;
+        margin-top: 90px;
+    }
+    
+    .faq__header {
+        padding: 24px;
+    }
+    
+    .faq__question {
+        font-size: 16px;
+        max-width: 70%;
+    }
+    
+    .faq__answer {
+        padding: 0 24px 24px;
+        font-size: 14px;
+    }
+    
+    .contact__form {
+        padding: 32px 24px;
+        margin: 0 16px;
+        margin-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+    
+    .contact__form-title {
+        font-size: 24px;
+    }
+    
+    .footer__top {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .footer__nav {
+        display: none !important;
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .video-modal__content {
+        margin: 0 16px;
+    }
+    
+    .main__section {
+        padding: 40px 0px;
+        padding-top: 0px;
+    }
+    
+    .main__fire-img,
+    .main__star-img {
+        width: 100px;
+    }
+    
+    .main__subtitle {
+        position: static;
+        font-size: 18px;
+    }
+    
+    .target-audience {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .target-audience__title {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    
+    .target-audience__card {
+        width: 100%;
+        padding: 24px;
+    }
+    
+    .target-audience__text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .why-section {
+        position: relative;
+    }
+    
+    .why-section::before {
+        background-image: url('../img/why-img-mobile.png') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        height: 100% !important;
+        min-height: 100vh !important;
+    }
+    
+    .why-section__benefits {
+        gap: 16px;
+    }
+    
+    .why-section__benefit {
+        padding: 24px;
+    }
+    
+    .why-section__benefit-number {
+        top: 12px;
+        right: 16px;
+    }
+    
+    .why-section__benefit-number-img {
+        width: clamp(80px, 20vw, 140px);
+        filter: drop-shadow(0 0 15px rgba(0, 235, 143, 0.4)) drop-shadow(0 0 30px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 45px rgba(0, 235, 143, 0.2));
+    }
+    
+    .why-section__benefit-title {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+    
+    .why-section__benefit-text {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+    
+    .why-section__cta-wrapper {
+        margin-top: 32px;
+    }
+    
+    .why-section__register-button {
+        padding: 14px 24px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .benefits-section__benefits {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .benefits-section__title,
+    .benefits-section__title-line {
+        font-size: 30px !important;
+    }
+    
+    .works-section__cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .works-section__card-wrapper:nth-child(1),
+    .works-section__card-wrapper:nth-child(2),
+    .works-section__card-wrapper:nth-child(3),
+    .works-section__card-wrapper:nth-child(4),
+    .works-section__card-wrapper:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    
+    .works-section__main-title {
+        font-size: clamp(18px, 5vw, 28px);
+    }
+    
+    .works-section__subtitle {
+        font-size: clamp(28px, 8vw, 56px);
+    }
+    
+    .bonuses__cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .bonuses__card {
+        min-height: 350px;
+    }
+    
+    .bonuses__card-description {
+        padding: 20px 24px;
+    }
+    
+    .bonuses__header {
+        margin-bottom: 40px;
+    }
+    
+    /* Стили из @media (max-width: 480px) */
+    .header {
+        padding-bottom: 30px;
+        height: 670px;
+        min-height: 670px;
+        padding-top: 0;
+        background-position: top center;
+    }
+    
+    .header__hero-wrapper {
+        gap: 24px;
+    }
+    
+    .header__title-line {
+        font-size: clamp(24px, 8vw, 48px);
+    }
+    
+    .header__description {
+        font-size: clamp(14px, 4vw, 18px);
+    }
+    
+    .header__price-wrapper {
+        min-width: 120px;
+    }
+    
+    .header__price-new {
+        font-size: 20px;
+    }
+    
+    .header__timer-value {
+        font-size: 20px;
+    }
+    
+    .header__bonus-block {
+        text-align: center;
+        align-items: center;
+        padding: 10px 14px;
+        height: auto;
+    }
+    
+    .faq__title {
+        font-size: 30px !important;
+        text-align: center;
+    }
+    
+    .contact__form-title {
+        font-size: 20px;
+    }
+    
+    .advantages__card--last {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .autolayout_title {
+        font-size: clamp(24px, 8vw, 40px);
+    }
+    
+    .program__card.expanded .program__card-content {
+        padding: 24px;
+        padding-top: 0px;
+    }
+    
+    .program__card-title {
+        padding: 24px;
+    }
 }
