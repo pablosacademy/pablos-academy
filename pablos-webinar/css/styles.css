@@ -951,10 +951,11 @@ body{
 
 .result__title{
     font-family: var(--font-benzin);
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(24px, 6vw, 48px);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     margin-bottom: 0;
+    text-align: center;
     gap: 20px;
     line-height: 1.1;
 }
@@ -1025,9 +1026,10 @@ body{
 .advantages__title, .mentor__title{
     color: var(--color-white);
     font-family: var(--font-benzin);
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(24px, 6vw, 48px);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
+    text-align: center;
     line-height: 125%;
     margin-bottom: 32px;
 }
@@ -1114,8 +1116,9 @@ body{
 /* Program Section Styles */
 .program__title{
     font-family: var(--font-benzin);
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(24px, 6vw, 48px);
     font-weight: var(--font-weight-bold);
+    text-align: center;
     text-transform: uppercase;
     line-height: 1.1;
     margin-bottom: 48px;
@@ -1302,6 +1305,7 @@ body{
 
 .bonuses__title {
     font-family: var(--font-benzin);
+    text-align: center;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     display: flex;
@@ -1313,7 +1317,7 @@ body{
 }
 
 .bonuses__title-line {
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(24px, 6vw, 48px);
     color: var(--color-white);
     display: block;
 }
@@ -1529,7 +1533,7 @@ body{
 }
 
 .why-section__title-line {
-    font-size: clamp(26px, 5vw, 64px);
+    font-size: clamp(24px, 6vw, 48px);
     color: var(--color-white);
     display: block;
 }
@@ -2985,10 +2989,12 @@ body{
 
 .speakers__title {
     font-family: var(--font-benzin);
-    font-size: clamp(28px, 6vw, 60px);
+    font-size: clamp(24px, 6vw, 48px);
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     line-height: 1.2;
+    text-align: center;
+    margin-bottom: 32px;
     text-align: center;
     margin-bottom: 48px;
     display: flex;
