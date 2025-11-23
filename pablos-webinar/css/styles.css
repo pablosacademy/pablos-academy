@@ -4677,15 +4677,24 @@ body{
     align-items: center;
   }
 
-/* Ограничение ширины для десктопа - отображение как на мобильном */
+/* Ограничение ширины для десктопа - отображение как на мобильном (420px и ниже) */
 @media (min-width: 769px) {
     body {
-        max-width: 428px;
+        max-width: 420px;
         margin: 0 auto;
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
     }
     
     html {
-        background-color: #1a1a1a;
+        background-color: #000000;
+    }
+    
+    /* Применяем все мобильные стили на десктопе - принудительно */
+    .advantages__title, .result__title, .program__title {
+        text-align: center;
+    }
+    
+    .speakers__title {
+        text-align: center;
     }
 }
