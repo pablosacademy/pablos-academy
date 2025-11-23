@@ -1570,8 +1570,8 @@ body{
 }
 
 .why-section__benefit-number-img {
-    width: 100px;
-    height: auto;
+    width: 153px;
+    height: 153px;
     object-fit: contain;
     display: block;
 }
@@ -4203,7 +4203,8 @@ body{
     }
     
     .why-section__benefit-number-img {
-        width: 80px;
+        width: 153px;
+        height: 153px;
         filter: drop-shadow(0 0 15px rgba(0, 235, 143, 0.4)) drop-shadow(0 0 30px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 45px rgba(0, 235, 143, 0.2));
     }
     
@@ -4996,7 +4997,8 @@ body{
     }
     
     .why-section__benefit-number-img {
-        width: 80px;
+        width: 153px;
+        height: 153px;
         filter: drop-shadow(0 0 15px rgba(0, 235, 143, 0.4)) drop-shadow(0 0 30px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 45px rgba(0, 235, 143, 0.2));
     }
     
