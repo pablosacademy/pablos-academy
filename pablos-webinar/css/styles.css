@@ -157,9 +157,9 @@ body{
 }
 .header__top .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    gap: 16px;
 }
 
 .header__bottom{
@@ -1039,9 +1039,7 @@ body{
 .advantages__cards{
     position: relative;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 20px;
     width: 100%;
 }
@@ -1155,8 +1153,8 @@ body{
 }
 
 .program__cards{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     align-items: start;
 }
@@ -2712,9 +2710,9 @@ body{
 
 .footer__top{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 32px;
+    gap: 24px;
 }
 
 .footer__nav{
@@ -2769,11 +2767,12 @@ body{
 
 .footer__bottom{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
     padding-top: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
 .footer__bottom-left,
@@ -3522,8 +3521,7 @@ body{
 
 .contact{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;    
+    flex-direction: column;
     gap: 24px;
 }
 
