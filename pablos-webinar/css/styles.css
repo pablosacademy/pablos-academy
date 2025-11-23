@@ -4627,3 +4627,16 @@ body{
     display: flex;
     align-items: center;
   }
+
+/* Ограничение ширины для десктопа - отображение как на мобильном */
+@media (min-width: 769px) {
+    body {
+        max-width: 428px;
+        margin: 0 auto;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+    }
+    
+    html {
+        background-color: #1a1a1a;
+    }
+}
