@@ -456,6 +456,7 @@ body{
     justify-content: center;
     margin-top: 24px;
     margin-bottom: 24px;
+    width: 100%;
 }
 
 .header__bonus-register-button {
@@ -476,6 +477,7 @@ body{
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
+    min-width: 100%;
 }
 
 .header__bonus-register-button:hover {
