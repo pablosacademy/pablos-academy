@@ -451,6 +451,53 @@ body{
     transform: translate(2px, -2px);
 }
 
+.header__bonus-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.header__bonus-register-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #00EB8F;
+    color: var(--color-black);
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-family: var(--font-benzin);
+    font-weight: var(--font-weight-bold);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: var(--transition);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+.header__bonus-register-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.header__bonus-register-text {
+    color: var(--color-black);
+}
+
+.header__bonus-register-icon {
+    width: 16px;
+    height: 16px;
+    color: var(--color-black);
+    transition: var(--transition);
+}
+
+.header__bonus-register-button:hover .header__bonus-register-icon {
+    transform: translate(2px, -2px);
+}
+
 .header__stats{
     display: flex;
     justify-content: space-between;
