@@ -157,9 +157,9 @@ body{
 }
 .header__top .container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    gap: 32px;
 }
 
 .header__bottom{
@@ -3885,11 +3885,6 @@ body{
     .header__top {
         padding: 15px 0;
         /* Учитываем safe-area */
-    }
-    
-    .header__top .container {
-        align-items: center;
-        justify-content: space-between;
     }
     
     .header__left {
