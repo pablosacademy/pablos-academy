@@ -1584,6 +1584,7 @@ body{
     height: 153px;
     object-fit: contain;
     display: block;
+    filter: drop-shadow(0 0 10px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 20px rgba(0, 235, 143, 0.2));
 }
 
 .why-section__benefit-content {
@@ -4209,6 +4210,7 @@ body{
     .why-section__benefit-number-img {
         width: 153px;
         height: 153px;
+        filter: drop-shadow(0 0 8px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 16px rgba(0, 235, 143, 0.2));
     }
     
     .why-section__benefit-title {
@@ -5007,6 +5009,7 @@ body{
     .why-section__benefit-number-img {
         width: 153px;
         height: 153px;
+        filter: drop-shadow(0 0 8px rgba(0, 235, 143, 0.3)) drop-shadow(0 0 16px rgba(0, 235, 143, 0.2));
     }
     
     .why-section__benefit-title {
