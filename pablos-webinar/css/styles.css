@@ -4678,6 +4678,7 @@ body{
   }
 
 /* Ограничение ширины для десктопа - отображение как на мобильном (420px и ниже) */
+/* Все стили идентичны мобильной версии */
 @media (min-width: 769px) {
     body {
         max-width: 420px;
@@ -4689,12 +4690,62 @@ body{
         background-color: #000000;
     }
     
-    /* Применяем все мобильные стили на десктопе - принудительно */
+    /* Применяем все мобильные стили на десктопе */
     .advantages__title, .result__title, .program__title {
         text-align: center;
     }
     
     .speakers__title {
         text-align: center;
+    }
+    
+    /* Применяем мобильные стили хедера на десктопе */
+    .header {
+        background-image: url(../img/hero-bg-mobile.png);
+        background-position: center;
+        height: 670px;
+        min-height: 670px;
+        padding-top: 0;
+        position: relative;
+    }
+    
+    .header__hero-wrapper {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+    
+    .header__hero-left {
+        max-width: 100%;
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .header__badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 16px auto 0;
+        height: 33px;
+        font-size: 12px;
+    }
+    
+    .header__date-badges {
+        justify-content: center;
+        width: 100%;
+        margin-top: 12px;
+        gap: 8px;
+    }
+    
+    .header__date-badge {
+        padding: 8px 12px;
+        flex: 1;
+        max-width: calc(50% - 4px);
+    }
+    
+    .header__date-badge-text {
+        font-size: 14px;
+        font-weight: 700;
     }
 }
