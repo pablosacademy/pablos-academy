@@ -1146,7 +1146,6 @@ body{
     text-transform: uppercase;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 24px;
     padding: 32px;
     box-sizing: border-box;
@@ -3232,6 +3231,7 @@ body{
 
 .about-mentor-content{
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
