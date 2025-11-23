@@ -951,7 +951,7 @@ body{
 
 .result__title{
     font-family: var(--font-benzin);
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 24px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     margin-bottom: 0;
@@ -1026,7 +1026,7 @@ body{
 .advantages__title, .mentor__title{
     color: var(--color-white);
     font-family: var(--font-benzin);
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 24px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     text-align: center;
@@ -1116,7 +1116,7 @@ body{
 /* Program Section Styles */
 .program__title{
     font-family: var(--font-benzin);
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 24px;
     font-weight: var(--font-weight-bold);
     text-align: center;
     text-transform: uppercase;
@@ -1317,7 +1317,7 @@ body{
 }
 
 .bonuses__title-line {
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 30px;
     color: var(--color-white);
     display: block;
 }
@@ -1533,7 +1533,7 @@ body{
 }
 
 .why-section__title-line {
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 24px;
     color: var(--color-white);
     display: block;
 }
@@ -1671,7 +1671,7 @@ body{
 }
 
 .benefits-section__title-line {
-    font-size: clamp(28px, 5vw, 60px);
+    font-size: 30px;
     color: var(--color-white);
     display: block;
 }
@@ -2989,14 +2989,12 @@ body{
 
 .speakers__title {
     font-family: var(--font-benzin);
-    font-size: clamp(24px, 6vw, 48px);
+    font-size: 24px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     line-height: 1.2;
     text-align: center;
     margin-bottom: 32px;
-    text-align: center;
-    margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     gap: 0;
