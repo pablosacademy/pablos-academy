@@ -127,7 +127,8 @@ body{
 .header{
     position: relative;
     z-index: 1000;
-    min-height: 100vh;
+    height: 670px;
+    min-height: 670px;
     width: 100%;
     background-image: url(../img/hero-bg-mobile.png);
     background-size: cover;
@@ -137,6 +138,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 0;
 }
 
 .header__top{
@@ -174,22 +176,27 @@ body{
 
 .header__hero-wrapper{
     display: flex;
-    gap: 60px;
+    flex-direction: column;
+    gap: 32px;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 /* Left Section */
 .header__hero-left{
     display: flex;
     flex-direction: column;
-    max-width: 900px;
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .header__badge{
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     background: var(--color-primary);
     color: var(--color-white);
@@ -200,7 +207,7 @@ body{
     font-weight: var(--font-weight-bold);
     font-size: 12px;
     width: fit-content;
-    margin-top: 16px;
+    margin: 16px auto 0;
 }
 
 .header__badge-icon{
@@ -215,7 +222,7 @@ body{
 
 .header__date-badges{
     display: flex;
-    gap: 12px;
+    gap: 8px;
     width: 100%;
     justify-content: center;
     margin-top: 12px;
@@ -227,13 +234,14 @@ body{
     box-shadow: inset 2px 2.00046px 9px rgba(255, 255, 255, 0.12), inset 1.5px 1px 4.5px rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(9.58px);
     border-radius: 6px;
-    flex: none;
+    flex: 1;
     order: 1;
     flex-grow: 0;
-    padding: 10px 16px;
+    padding: 8px 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: calc(50% - 4px);
 }
 
 .header__date-badge-text{
@@ -248,11 +256,11 @@ body{
 .header__title{
     font-family: var(--font-benzin);
     font-weight: var(--font-weight-bold);
-    font-size: clamp(40px, 6vw, 72px);
+    font-size: 32px;
     text-transform: uppercase;
     line-height: 1.1;
     color: var(--color-white);
-    margin: 0;
+    margin: 0 0 24px 0;
     text-align: center;
 }
 
@@ -262,12 +270,12 @@ body{
 
 .header__description{
     font-family: var(--font-space-grotesk);
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(14px, 4vw, 18px);
     color: var(--color-white);
     line-height: 1.5;
-    max-width: 550px;
+    max-width: 100%;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 /* Right Section */
@@ -277,16 +285,18 @@ body{
     gap: 20px;
     align-items: center;
     width: 100%;
-    max-width: 430px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
 }
 
 .header__price-block{
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 16px;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
     max-width: 100%;
     min-width: 0;
 }
@@ -299,7 +309,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 6px;
-    min-width: 140px;
+    width: 100%;
+    max-width: 200px;
+    min-width: 120px;
 }
 
 .header__price-old{
@@ -1312,8 +1324,8 @@ body{
 
 .bonuses__cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 24px;
     align-items: start;
 }
 
@@ -1666,9 +1678,9 @@ body{
 
 .benefits-section__benefits {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 24px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -1979,8 +1991,8 @@ body{
 /* Target Audience section styles */
 .target-audience {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    flex-direction: column;
+    gap: 32px;
     position: relative;
     overflow: hidden;
 }
