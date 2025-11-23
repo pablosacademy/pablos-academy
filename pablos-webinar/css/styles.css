@@ -1550,13 +1550,10 @@ body{
 }
 
 .why-section__benefit {
-    position: relative;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: inset 2px 2.00046px 9px rgba(255, 255, 255, 0.12), inset 1.5px 1px 4.5px rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(7.58px);
     border-radius: 36px;
-    padding: 32px;
-    overflow: hidden;
 }
 
 .why-section__benefit-number {
