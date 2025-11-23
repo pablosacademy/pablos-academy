@@ -2475,8 +2475,8 @@ body{
 
 .reviews__content{
     display: flex;
-    justify-content: space-between;
-    gap: 40px;
+    flex-direction: column;
+    gap: 24px;
     align-items: stretch;
     margin-top: 48px;
 }
@@ -2542,9 +2542,10 @@ body{
 
 .reviews__video-wrapper{
     position: relative;
-    width: 650px;
-    max-width: 650px;
-    height: 422px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
     border-radius: 16px;
     overflow: hidden;
     background: var(--color-black);
@@ -2560,14 +2561,15 @@ body{
 .contact__form{
     background: rgba(255, 255, 255, 0.05);
     border-radius: 24px;
-    padding: 48px;
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 32px 24px;
+    max-width: 100%;
+    margin: 0 16px;
+    margin-bottom: max(16px, env(safe-area-inset-bottom));
 }
 
 .contact__form-title{
     font-family: var(--font-benzin);
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--color-white);
     text-align: center;
@@ -2961,21 +2963,26 @@ body{
 .autolayout_container{
     text-align: center;
     margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 .autolayout_title{
     font-family: var(--font-benzin);
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     color: var(--color-white);
-    margin-bottom: 32px;
+    margin-bottom: 0;
     line-height: 120%;
 }
 
 .autolayout_image{
+    width: 280px;
     max-width: 100%;
     height: auto;
-    border-radius: 16px;
+    border-radius: 4px;
 }
 .about-mentor{
     padding-top: 40px;
