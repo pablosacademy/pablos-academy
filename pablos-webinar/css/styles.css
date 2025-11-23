@@ -1430,9 +1430,9 @@ body{
 .why-section::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%) scale(0.5);
     width: 100vw;
     min-height: 100%;
     background-image: url('../img/choose-tariff.png');
@@ -4186,8 +4186,9 @@ body{
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        top: 0 !important;
-        bottom: 0 !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(0.5) !important;
         height: 100% !important;
         min-height: 100vh !important;
     }
@@ -4983,8 +4984,9 @@ body{
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
-        top: 0 !important;
-        bottom: 0 !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(0.5) !important;
         height: 100% !important;
         min-height: 100vh !important;
     }
