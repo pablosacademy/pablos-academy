@@ -4715,6 +4715,19 @@ body{
         text-align: center;
     }
     
+    /* Header top - только логотип и мастер-клас, как на мобилке */
+    .header__nav {
+        display: none;
+    }
+    
+    .header__cta {
+        display: none;
+    }
+    
+    .header__masterclass-info {
+        display: flex;
+    }
+    
     /* Применяем мобильные стили хедера на десктопе */
     .header {
         background-image: url(../img/hero-bg-mobile.png);
