@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /
+
+Allow: /$
+Allow: /index.html$
+Allow: /privacy-policy.html$
+Allow: /public-offer.html$
+
+Sitemap: https://pablos.academy/sitemap.xml
